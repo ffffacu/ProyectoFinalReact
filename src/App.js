@@ -6,8 +6,8 @@ import { Tooltip, Toast, Popover } from 'bootstrap'
 const App = () => {
   return (
     <div className="App">
-      <Navbar></Navbar>
-      <ItemListContainer></ItemListContainer>
+      <Navbar  />
+      <ItemListContainer />
     </div>
   );
 }
