@@ -1,6 +1,6 @@
 import './App.css';
-import Navbar from './componets/NavBar/Navbar.jsx';
-import ItemListContainer from './componets/ItemListContainer/ItemListContainer.jsx';
+import Navbar from './componets/NavBar';
+import ItemListContainer from './componets/ItemListContainer';
 import { Tooltip, Toast, Popover } from 'bootstrap'
 
 const App = () => {
