@@ -1,6 +1,5 @@
 .containerAddCar{
     display:grid;
-    box-shadow: 1px 1px 1px 1px;
     justify-content: center;
     margin: auto;
     width:180px;

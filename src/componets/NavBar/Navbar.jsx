@@ -22,7 +22,7 @@ const Navbar = () => {
             </li>
             <li><a className="dropdown-item" href="#">Remeras</a></li>
             <li><a className="dropdown-item" href="#">Bolsitas de tela</a></li>
-            <li><a className="dropdown-item" href="#">Souvenir</a></li>
+            <li><a className="dropdown-item" href="#">Llaveros</a></li>
             <li><hr className="dropdown-divider"></hr></li>
             <li><a className="dropdown-item" href="#">Otros</a></li>
           </ul>

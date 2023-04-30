@@ -1,0 +1,19 @@
+.itemCatalogue{
+    width: 300px;
+    box-shadow: 1px 1px 4px 3px #d809f5;
+    margin: 10px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+
+.btnDetail{
+    border: none;
+    background: linear-gradient(to bottom, black, rgb(161, 153, 153));
+    color: white;
+}
