@@ -1,14 +1,20 @@
+import { BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
 import Navbar from './componets/NavBar';
 import ItemListContainer from './componets/ItemListContainer';
+import ItemDetailContainer from "./componets/ItemDetailContainer";
 import { Tooltip, Toast, Popover } from 'bootstrap'
 
 const App = () => {
   return (
-    <div className="App">
+    <BrowserRouter className="App">
       <Navbar  />
-      <ItemListContainer />
-    </div>
+      <Routes>
+        <Route path="/" element={<ItemListContainer />}  />
+        <Route path="/category/:categoryId" element={<ItemListContainer />} />
+        <Route path="item/:id" element={<ItemDetailContainer />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

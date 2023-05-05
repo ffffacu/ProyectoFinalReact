@@ -1,5 +1,6 @@
 
-import "./ItemDetail.css";
+import "./Item.css";
+import { Link } from "react-router-dom";
 
 const ItemDetail = (props) =>{
     return(
@@ -12,7 +13,7 @@ const ItemDetail = (props) =>{
                 <p>Precio: ${props.precio}</p>
             </section>
             <section>
-                <button className="btnDetail">Ver detalles</button>
+                <button className="btnDetail"><Link to={`/item/${props.id}`}>Ver detalles</Link></button>
             </section>
         </article>
     )

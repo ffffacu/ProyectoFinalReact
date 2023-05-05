@@ -1,2 +1,2 @@
-import ItemDetail from "./ItemDetail";
-export default ItemDetail
+import Item from "./Item";
+export default Item

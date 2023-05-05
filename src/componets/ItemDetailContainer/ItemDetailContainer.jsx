@@ -1,10 +1,12 @@
-import ItemCount from "../ItemCount";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
-import {getProducts, getProductsByCategory} from "../../asyncMocks";
-import ItemList from "../ItemList";
+import {getProducts, getPorductsById} from "../../asyncMocks";
 
-const ItemListContainer = () =>{
+
+
+
+
+const ItemDetailContainer = () =>{
     const [product, setProducts]= useState([]);
     const {categoryId}=useParams();
 
@@ -26,4 +28,4 @@ const ItemListContainer = () =>{
     )
 }
 
-export default ItemListContainer
+export default ItemDetailContainer;
