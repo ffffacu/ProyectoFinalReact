@@ -1,4 +1,4 @@
-import ItemDetail from "../ItemDetail";
+import Item from "../Item";
 import "./ItemList.css"
 
 
@@ -6,7 +6,7 @@ import "./ItemList.css"
 const ItemList= (props) =>{
     return (
         <div className="containerProducts">
-            {props.products.map(prod => <ItemDetail key={prod.id} {...prod} />)}
+            {props.products.map(prod => <Item key={prod.id} {...prod} />)}
         </div>
     )
 }
