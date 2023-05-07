@@ -1,9 +1,8 @@
-import {useState} from "react";
 import { useCount } from "./hook/useCount";
 import "./ItemCount.css";
 
 const ItemCount= (props) =>{
-  const {count, reset , increment, decrement}= useCount(1,1,10) //agregar stock remplazando el 10
+  const {count, reset , increment, decrement}= useCount(1,1,props.stock) //agregar stock remplazando el 10
 return(
     <>
     <div className="containerAddCar">

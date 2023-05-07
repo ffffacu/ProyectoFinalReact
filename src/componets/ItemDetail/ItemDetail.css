@@ -1,0 +1,9 @@
+.detailItem{
+    height: 500px;
+    text-align: center;
+    padding: 20px;
+}
+.detailContainer{
+    margin: auto;
+    width: 30rem;
+}

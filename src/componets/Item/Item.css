@@ -11,11 +11,16 @@
     justify-content: center;
     align-items: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align: center;
 }
 
 
 .btnDetail{
     border: none;
     background: linear-gradient(to bottom, black, rgb(161, 153, 153));
+}
+a{
     color: white;
+    text-decoration: none;
+
 }

@@ -12,7 +12,7 @@ const Item = (props) =>{
                 <p>Precio: ${props.precio}</p>
             </section>
             <section>
-                <button className="btnDetail"><Link to={`/item/${props.id}`}>Ver detalles</Link></button>
+                <button className="btnDetail"><Link to={`/item/${props.id}`} >Ver detalles</Link></button>
             </section>
         </article>
     )
