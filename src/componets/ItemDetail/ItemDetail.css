@@ -6,4 +6,8 @@
 .detailContainer{
     margin: auto;
     width: 30rem;
+    box-shadow: 1px 1px 4px 3px rgba(255 0 255);
+}
+.itemCount{
+    height:200px;
 }

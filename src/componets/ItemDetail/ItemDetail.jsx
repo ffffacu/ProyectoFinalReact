@@ -15,8 +15,8 @@ const ItemDetail = ({id,name,description,category,img,stock,precio}) =>{
       <ListGroup className="list-group-flush">
       <ListGroup.Item>Precio: <b>${precio}</b></ListGroup.Item>
         <ListGroup.Item>Stock: <b>{stock}</b></ListGroup.Item>
-        <ListGroup.Item>
-            <ItemCount stock={stock}></ItemCount>
+        <ListGroup.Item className="itemCount">
+            <ItemCount maxCount={stock}></ItemCount>
         </ListGroup.Item>
       </ListGroup>
     </Card>

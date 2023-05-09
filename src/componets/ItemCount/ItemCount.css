@@ -33,15 +33,26 @@
 p{
     font-size:15px
 }
-.btnAddCar{
+.amountResetAddCar{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    padding: 10px;
+    width: 230px;
+    height: 4rem;
+
+}
+.btnAddCar, .btnReset{
     border: 0;
-    height: 20px;
-    font-size: 16px;
+    font-size: 0.8rem;
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
 }
 
-.btnAddCar:hover{
-    box-shadow: 1px 1px 1px 1px;
-    background-color: rgb(105, 100, 100);
-    color: white;
 
+.btnAddCar:hover, .btnReset:hover{
+    box-shadow: 0 1px 2px 3px rgba(255 0 255);
 }
