@@ -1,51 +1,70 @@
 .containerAddCar{
-    display:grid;
+    display:flex;
     justify-content: center;
     margin: auto;
-    width:180px;
-    height: 90px;
+    width:100%;
+    height: 100%;
     padding: 10px;
 }
 .amount{
-    display: flex;
-    flex-direction: row;
-    height: 30px;
+    padding-top: 30px;
+    
 }
 
 .amountIncrease,.amountDecrease{
   border: 0;
   font-size: 15px;
   font-weight: bold;
+  background-color: black;
+  color: white;
+  width: 31%;
   
 }
 
+.amountIncrease{
+    border-radius: 9px 0 0 9px;
+}
+
+.amountDecrease{
+    border-radius: 0 9px 9px 0;
+}
 .amountIncrease:hover,.amountDecrease:hover{
-    background-color: rgb(105, 100, 100);
+
     color: white;
-    box-shadow: 1px 1px 1px 1px;
+    box-shadow: 0px 0px 0px 1px rgba(255 0 255);
     
 }
 
 .amountTotal{
     font-size: 20px;
     padding: 0 5px 0 5px;
+    width: 40%
 }
 p{
     font-size:15px
 }
 .amountResetAddCar{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content:space-around;
     padding: 10px;
-    width: 230px;
-    height: 4rem;
+    font-family: 'Nosifer', cursive;
+
+}
+.amountIncrementDecrement{
+    display: flex;
+    flex-direction: row;
+    border: solid 1px;
+    width: 150px;
+    height: 2rem;
+    border-radius: 10px;
+    padding: 0;
 
 }
 .btnAddCar, .btnReset{
     border: 0;
     font-size: 0.8rem;
-    padding: 5px;
+    padding: 10px;
     cursor: pointer;
     background-color: black;
     color: white;

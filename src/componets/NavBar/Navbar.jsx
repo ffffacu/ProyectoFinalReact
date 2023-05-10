@@ -9,7 +9,7 @@ const Navbar = () => {
         <div className="subliNav">
         <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid ">
-            <a className="navbar-brand" href="#"> <img src={logo} height="40px" width="40px"></img><Link to="/">Sublizone</Link></a>
+            <a className="navbar-brand subliTitle" href="#"> <img src={logo} height="50px" width="50px"></img><Link to="/">SubliZone</Link></a>
             <button className="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon "></span>
             </button>

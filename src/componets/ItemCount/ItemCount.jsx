@@ -7,14 +7,16 @@ return(
     <>
     <div className="containerAddCar">
         <div className="amount">
-            <p>Cantidad:</p>
+            <div className="amountIncrementDecrement">
             <button className="amountIncrease" onClick={increment}>+</button>
             <h3 className="amountTotal">{count}</h3>
             <button className="amountDecrease" onClick={decrement}>-</button>
+            </div>
         </div>
         <div className="amountResetAddCar">
+        <button className="btnAddCar" >Agregar al carrito</button>
         <button className="btnReset" onClick={reset}>Borrar</button>
-            <button className="btnAddCar" >Agregar al carrito</button>
+
         </div>
     </div>
     </>

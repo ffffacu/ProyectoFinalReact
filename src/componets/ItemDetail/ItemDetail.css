@@ -1,13 +1,22 @@
 .detailItem{
-    height: 500px;
+    height: 700px;
     text-align: center;
     padding: 20px;
+    font-family: 'Lilita One', cursive;
+    font-size: 40px;
 }
 .detailContainer{
     margin: auto;
-    width: 30rem;
+    width: 40rem;
     box-shadow: 1px 1px 4px 3px rgba(255 0 255);
 }
 .itemCount{
     height:200px;
+
+}
+.itemNameDetail{
+    font-size: 40px;
+}
+.itemDescription{
+    font-size: 20px;
 }

@@ -9,8 +9,8 @@ const ItemDetail = ({id,name,description,category,img,stock,precio}) =>{
            <Card className="detailContainer">
       <Card.Img variant="top" src={img} alt={name} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Title className="itemNameDetail">{name}</Card.Title>
+        <Card.Text className="itemDescription">{description}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
       <ListGroup.Item>Precio: <b>${precio}</b></ListGroup.Item>
