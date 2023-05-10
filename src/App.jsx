@@ -4,7 +4,7 @@ import Navbar from './componets/NavBar';
 import ItemListContainer from './componets/ItemListContainer';
 import ItemDetailContainer from "./componets/ItemDetailContainer";
 import { Tooltip, Toast, Popover } from 'bootstrap'
-
+import Footer from "./componets/Footer";
 const App = () => {
   return (
     <BrowserRouter className="App">
@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/category/:categoryId" element={<ItemListContainer />} />
         <Route path="item/:itemId" element={<ItemDetailContainer />} />
       </Routes>
+      <Footer></Footer>
     </BrowserRouter>
   );
 }

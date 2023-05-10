@@ -1,5 +1,4 @@
 .detailItem{
-    height: 700px;
     text-align: center;
     padding: 20px;
     font-family: 'Lilita One', cursive;
@@ -7,12 +6,15 @@
 }
 .detailContainer{
     margin: auto;
-    width: 40rem;
+    width: 35rem;
     box-shadow: 1px 1px 4px 3px rgba(255 0 255);
 }
 .itemCount{
     height:200px;
 
+}
+.imgDetail{
+    height: 350px;
 }
 .itemNameDetail{
     font-size: 40px;
