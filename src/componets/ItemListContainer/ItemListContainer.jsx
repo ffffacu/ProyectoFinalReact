@@ -1,4 +1,3 @@
-import ItemCount from "../ItemCount";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {getProducts, getProductsByCategory} from "../../asyncMocks";

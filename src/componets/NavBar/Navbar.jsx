@@ -4,7 +4,11 @@ import CartWidget from '../CartWidget';
 import './Navbar.css';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
+
+
+
     return(
         <div className="subliNav">
         <nav className="navbar  navbar-expand-lg navbar-dark bg-dark">
