@@ -2,23 +2,20 @@ import ItemCount from "../ItemCount";
 import "./ItemDetail.css";
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-import { useState, useContext } from "react";
+import {useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 
 const ItemDetail = ({id,name,description,category,img,stock,precio}) =>{
-   const [quantityAdd, setQuantityAdd] = useState(0)
-   const {addItem}= useContext(CartContext)
+  const {addItem, quantityProduct, cart, totalCart}= useContext(CartContext)
+
+  useEffect(()=>{quantityProduct()},[cart])
 
   const handleOnAdd = (quantity) =>{
-    setQuantityAdd(quantity)
-
     const item = {
-      id, name, precio
+      id, name, precio, img
     }
-
     addItem (item, quantity)
   }
-
 
     return(
         <article className="detailItem">
@@ -32,7 +29,7 @@ const ItemDetail = ({id,name,description,category,img,stock,precio}) =>{
       <ListGroup.Item>Precio: <b>${precio}</b></ListGroup.Item>
         <ListGroup.Item>Stock: <b>{stock}</b></ListGroup.Item>
         <ListGroup.Item className="itemCount">
-            <ItemCount maxCount={stock} addCart={handleOnAdd}></ItemCount>
+            <ItemCount maxCount={stock} onChangeCount={(e) => handleOnAdd(e)} ></ItemCount>
         </ListGroup.Item>
       </ListGroup>
     </Card>
