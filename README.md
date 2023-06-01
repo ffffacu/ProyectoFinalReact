@@ -16,3 +16,13 @@ Sublizone es un proyecto ecommerce, con la función de poder visualizar una tien
 
   **Al terminar de instalar las dependencias podremos iniciar el proyecto en nuestro ordenador**
 >  - npm start
+
+## Experiencia del usuarios
+**El usuario podrá**
+
+ - Navegar entre distintas categorias.
+ - Navegar dentro de los productos del catalogo.
+ - Visualizar la imagen del producto, su precio, su cantidad de stock.
+ - Generar una orden con cada producto seleccionado.
+ - Colocar sus datos para poder terminar dicha orden y sea contactada por el  vendedor.
+ - Si su orden fue finalizada correctamente podrá visualizar su numero de pedido realizado
