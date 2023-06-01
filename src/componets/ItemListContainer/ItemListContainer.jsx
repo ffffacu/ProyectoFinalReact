@@ -1,28 +1,32 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import {getProducts, getProductsByCategory} from "../../asyncMocks";
 import ItemList from "../ItemList";
+import { getCollection } from "../../utils/getFirestore";
 
 const ItemListContainer = () =>{
     const [product, setProducts]= useState([]);
     const {categoryId}=useParams();
-
-    useEffect (()=>{
-        const asyncFunc= categoryId ? getProductsByCategory : getProducts;
-        asyncFunc(categoryId).then (resp =>{
-        setProducts(resp);
-        }).catch(error =>{
-            console.error (error);
-        })
-    }, [categoryId]);
-
-    return(
+    
+    useEffect(() => {
+            getCollection("Items").then((res) => {
+                const producto = res;
+                if (categoryId) {
+                    const productoFiltrado = producto.filter(
+                    (prod) => prod.CategoryId == categoryId || categoryId == 0
+                    );
+                    setProducts(productoFiltrado);
+                    return;
+                }
+                    setProducts(producto);
+                });
+                }, [categoryId]);
+    return (
         <div>
-            <h1>{product.category}</h1>
-            <ItemList  products={product}  />
+            {product.length>0 ? (<ItemList  products={product} />) : (<h1>Cargando</h1>)}
         </div>
         
     )
 }
 
-export default ItemListContainer
+
+export default ItemListContainer;

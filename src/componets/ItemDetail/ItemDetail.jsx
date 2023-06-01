@@ -5,31 +5,34 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import {useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
 
-const ItemDetail = ({id,name,description,category,img,stock,precio}) =>{
+const ItemDetail = ({id,Title,Description,Img,Stock,Price}) =>{
   const {addItem, quantityProduct, cart, totalCart}= useContext(CartContext)
+
+console.log(id);
 
   useEffect(()=>{quantityProduct()},[cart])
 
   const handleOnAdd = (quantity) =>{
     const item = {
-      id, name, precio, img
+      id, Title, Price, Img
     }
     addItem (item, quantity)
   }
 
+  
     return(
         <article className="detailItem">
           <Card className="detailContainer">
-      <Card.Img className="imgDetail" variant="top" src={`../${img}`} alt={name} />
+      <Card.Img className="imgDetail" variant="top" src={Img} alt={Title} />
       <Card.Body>
-        <Card.Title>{name}</Card.Title>
-        <Card.Text>{description}</Card.Text>
+        <Card.Title>{Title}</Card.Title>
+        <Card.Text>{Description}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-      <ListGroup.Item>Precio: <b>${precio}</b></ListGroup.Item>
-        <ListGroup.Item>Stock: <b>{stock}</b></ListGroup.Item>
+      <ListGroup.Item>Precio: <b>${Price}</b></ListGroup.Item>
+        <ListGroup.Item>Stock: <b>{Stock}</b></ListGroup.Item>
         <ListGroup.Item className="itemCount">
-            <ItemCount maxCount={stock} onChangeCount={(e) => handleOnAdd(e)} ></ItemCount>
+            <ItemCount maxCount={Stock} onChangeCount={(e) => handleOnAdd(e)} ></ItemCount>
         </ListGroup.Item>
       </ListGroup>
     </Card>

@@ -1,0 +1,20 @@
+.container{
+    text-align: center;
+    padding:20px;
+    font-family: 'Lilita One', cursive;
+}
+.containerButton{
+    border: 0;
+    font-size: 0.9rem;
+    padding: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Nosifer', cursive;
+    cursor: pointer;
+}
+.containerButton:hover{
+    box-shadow: 0 1px 2px 3px rgba(255 0 255);
+}
