@@ -1,0 +1,26 @@
+.containerLoading{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.circleLoading{
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+    box-shadow: 4px 0 0 rgba(255 0 255);
+    background: transparent;
+    animation: animate 1s linear infinite;
+}
+.itemLoading{
+    color:rgba(255 0 255) ;
+    border-radius: 50%;
+    font-size: 2em;
+    box-shadow: 0 0 3px rgba(red);
+}
+
+@keyframes animate {
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+    
+}

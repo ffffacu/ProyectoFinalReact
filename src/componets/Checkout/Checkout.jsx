@@ -5,6 +5,7 @@ import CheckoutForm from "../CheckoutForm";
 import { Link } from "react-router-dom";
 import "./checkout.css"
 
+
 const Checkout = () =>{
     const {cart,total}= useContext(CartContext);
     const [orderId, setOrderId]= useState(null)
@@ -27,7 +28,7 @@ const Checkout = () =>{
 
     return (<div>
     {orderId != null ? (<div className="container">
-                          <h1>Tu orden es: {orderId}</h1>
+                          <h1>Tu numero de orden es: {orderId}</h1>
                           <button className="containerButton"><Link to="/" >Volver a la tienda</Link></button>
                         </div>) :
     (<CheckoutForm  onConfirmOrder={handlerAddCart}></CheckoutForm>)}

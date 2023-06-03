@@ -1,4 +1,6 @@
 import {createContext, useState} from "react";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const CartContext= createContext(null);
 
@@ -25,10 +27,30 @@ export const CartProvider = ({children})=>{
     
     const addItem =(item, quantity) =>{
         if (!isInCart(item.id)){
-            setCart(e=> [...e, {...item, quantity}]
-                )
+            setCart(e=> [...e, {...item, quantity}])
+            toast.success('Producto agregado', {
+                position: "bottom-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+
         }else{
-            console.error("El producto ya fue agregado al carrito")
+            toast.error('Producto ya existente en el carrito', {
+                position: "bottom-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });
+
         }
     }
     

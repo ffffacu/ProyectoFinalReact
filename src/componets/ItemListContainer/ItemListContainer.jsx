@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ItemList from "../ItemList";
 import { getCollection } from "../../utils/getFirestore";
+import "./itemListContainer.css";
+import Footer from "../Footer";
 
 const ItemListContainer = () =>{
     const [product, setProducts]= useState([]);
@@ -9,20 +11,27 @@ const ItemListContainer = () =>{
     
     useEffect(() => {
             getCollection("Items").then((res) => {
-                const producto = res;
+                const products = res;
                 if (categoryId) {
-                    const productoFiltrado = producto.filter(
+                    const productsFilter = products.filter(
                     (prod) => prod.CategoryId == categoryId || categoryId == 0
                     );
-                    setProducts(productoFiltrado);
+                    setProducts(productsFilter);
                     return;
                 }
-                    setProducts(producto);
+                    setProducts(products);
                 });
                 }, [categoryId]);
     return (
         <div>
-            {product.length>0 ? (<ItemList  products={product} />) : (<h1>Cargando</h1>)}
+            {product.length >0 ? (<>
+                <ItemList  products={product} />
+            </>) : (
+            <div className="containerLoading">
+                <div className="itemLoading">Cargando...</div>
+                <div className="circleLoading"></div>
+            </div>
+            )}
         </div>
         
     )

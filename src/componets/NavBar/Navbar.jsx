@@ -20,8 +20,8 @@ const NavBar = ({category}) => {
             <li className="nav-item dropdown  ">
             <a className="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
           <ul className="dropdown-menu " aria-labelledby="navbarScrollingDropdown" >
-            {category.map((cat)=>{
-              return <li><Link className="dropdown-item" to= {`/category/${cat.id}`}> {cat.Categoria}</Link></li>
+            {category.map((cat)=>{ 
+              return  <li><Link className="dropdown-item"  to= {`/category/${cat.id}`}> {cat.Categoria}</Link></li>
             })}
             <li><hr className="dropdown-divider"></hr></li>
             <li><Link className="dropdown-item" to="/category/otros">Otros</Link></li>

@@ -2,7 +2,9 @@
     text-align: center;
     padding: 20px;
     font-family: 'Lilita One', cursive;
-    font-size: 40px;
+}
+.detailContainerPrice{
+    font-size:40px;
 }
 .detailContainer{
     margin: auto;

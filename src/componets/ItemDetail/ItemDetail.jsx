@@ -4,11 +4,11 @@ import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import {useContext, useEffect } from "react";
 import { CartContext } from "../context/CartContext";
+import { ToastContainer } from 'react-toastify';
 
 const ItemDetail = ({id,Title,Description,Img,Stock,Price}) =>{
   const {addItem, quantityProduct, cart, totalCart}= useContext(CartContext)
 
-console.log(id);
 
   useEffect(()=>{quantityProduct()},[cart])
 
@@ -29,10 +29,11 @@ console.log(id);
         <Card.Text>{Description}</Card.Text>
       </Card.Body>
       <ListGroup className="list-group-flush">
-      <ListGroup.Item>Precio: <b>${Price}</b></ListGroup.Item>
-        <ListGroup.Item>Stock: <b>{Stock}</b></ListGroup.Item>
+      <ListGroup.Item  className="detailContainerPrice">Precio: <b>${Price}</b></ListGroup.Item>
+        <ListGroup.Item className="detailContainerPrice">Stock: <b>{Stock}</b></ListGroup.Item>
         <ListGroup.Item className="itemCount">
             <ItemCount maxCount={Stock} onChangeCount={(e) => handleOnAdd(e)} ></ItemCount>
+            <ToastContainer />
         </ListGroup.Item>
       </ListGroup>
     </Card>
